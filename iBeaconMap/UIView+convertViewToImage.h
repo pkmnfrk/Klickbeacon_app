@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  UIView+convertViewToImage.h
 //  iBeaconMap
 //
 //  Created by Michael Caron on 2014-05-20.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface UIView (convertViewToImage)
+-(UIImage *) convertViewToImage;
 
 @end

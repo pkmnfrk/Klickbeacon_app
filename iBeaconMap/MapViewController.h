@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FirstViewController.h
 //  iBeaconMap
 //
 //  Created by Michael Caron on 2014-05-20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface MapViewController : UIViewController
 
 @end

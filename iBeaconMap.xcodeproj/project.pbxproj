@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2724070E192E88DB0076AF54 /* DetailViewInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2724070D192E88DB0076AF54 /* DetailViewInteractionController.m */; };
+		2724075A192F96870076AF54 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27240759192F96870076AF54 /* SettingsViewController.m */; };
+		27240760192F9BD10076AF54 /* OptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2724075F192F9BD10076AF54 /* OptionTableViewCell.m */; };
+		27240763192FA97C0076AF54 /* EditCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27240762192FA97C0076AF54 /* EditCellViewController.m */; };
+		27AF20BA192D346100904B48 /* UIViewController+hp_layoutGuideFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AF20B9192D346100904B48 /* UIViewController+hp_layoutGuideFix.m */; };
+		27AF20BF192D3F6400904B48 /* FindUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AF20BE192D3F6400904B48 /* FindUserTableViewController.m */; };
+		27AF20C3192D40EE00904B48 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AF20C2192D40EE00904B48 /* User.m */; };
 		27C36BA7192BB4E700E2C7C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C36BA6192BB4E700E2C7C0 /* Foundation.framework */; };
 		27C36BA9192BB4E700E2C7C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C36BA8192BB4E700E2C7C0 /* CoreGraphics.framework */; };
 		27C36BAB192BB4E700E2C7C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C36BAA192BB4E700E2C7C0 /* UIKit.framework */; };
@@ -14,15 +21,18 @@
 		27C36BB3192BB4E700E2C7C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BB2192BB4E700E2C7C0 /* main.m */; };
 		27C36BB7192BB4E700E2C7C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BB6192BB4E700E2C7C0 /* AppDelegate.m */; };
 		27C36BBA192BB4E700E2C7C0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C36BB8192BB4E700E2C7C0 /* Main_iPhone.storyboard */; };
-		27C36BBD192BB4E700E2C7C0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C36BBB192BB4E700E2C7C0 /* Main_iPad.storyboard */; };
-		27C36BC0192BB4E700E2C7C0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BBF192BB4E700E2C7C0 /* FirstViewController.m */; };
-		27C36BC3192BB4E700E2C7C0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BC2192BB4E700E2C7C0 /* SecondViewController.m */; };
+		27C36BC0192BB4E700E2C7C0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BBF192BB4E700E2C7C0 /* MapViewController.m */; };
 		27C36BC5192BB4E700E2C7C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C36BC4192BB4E700E2C7C0 /* Images.xcassets */; };
 		27C36BCC192BB4E700E2C7C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C36BCB192BB4E700E2C7C0 /* XCTest.framework */; };
 		27C36BCD192BB4E700E2C7C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C36BA6192BB4E700E2C7C0 /* Foundation.framework */; };
 		27C36BCE192BB4E700E2C7C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C36BAA192BB4E700E2C7C0 /* UIKit.framework */; };
 		27C36BD6192BB4E700E2C7C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27C36BD4192BB4E700E2C7C0 /* InfoPlist.strings */; };
 		27C36BD8192BB4E700E2C7C0 /* iBeaconMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BD7192BB4E700E2C7C0 /* iBeaconMapTests.m */; };
+		27C36BE3192BDB6700E2C7C0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BE2192BDB6700E2C7C0 /* DetailViewController.m */; };
+		27C36BE6192BDBD500E2C7C0 /* UIView+convertViewToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BE5192BDBD500E2C7C0 /* UIView+convertViewToImage.m */; };
+		27C36BE9192BE22300E2C7C0 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BE8192BE22300E2C7C0 /* UIImage+ImageEffects.m */; };
+		27C36BEC192BE92400E2C7C0 /* DetailViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BEB192BE92400E2C7C0 /* DetailViewAnimation.m */; };
+		27C36BEF192BEC2300E2C7C0 /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C36BEE192BEC2300E2C7C0 /* MyNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2724070C192E88DB0076AF54 /* DetailViewInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewInteractionController.h; sourceTree = "<group>"; };
+		2724070D192E88DB0076AF54 /* DetailViewInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewInteractionController.m; sourceTree = "<group>"; };
+		27240758192F96870076AF54 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		27240759192F96870076AF54 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2724075E192F9BD10076AF54 /* OptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewCell.h; sourceTree = "<group>"; };
+		2724075F192F9BD10076AF54 /* OptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewCell.m; sourceTree = "<group>"; };
+		27240761192FA97C0076AF54 /* EditCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCellViewController.h; sourceTree = "<group>"; };
+		27240762192FA97C0076AF54 /* EditCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCellViewController.m; sourceTree = "<group>"; };
+		27AF20B8192D346100904B48 /* UIViewController+hp_layoutGuideFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+hp_layoutGuideFix.h"; path = "../UIViewController+hp_layoutGuideFix.h"; sourceTree = "<group>"; };
+		27AF20B9192D346100904B48 /* UIViewController+hp_layoutGuideFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+hp_layoutGuideFix.m"; path = "../UIViewController+hp_layoutGuideFix.m"; sourceTree = "<group>"; };
+		27AF20BD192D3F6400904B48 /* FindUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindUserTableViewController.h; sourceTree = "<group>"; };
+		27AF20BE192D3F6400904B48 /* FindUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindUserTableViewController.m; sourceTree = "<group>"; };
+		27AF20C1192D40EE00904B48 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		27AF20C2192D40EE00904B48 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		27C36BA3192BB4E700E2C7C0 /* iBeaconMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeaconMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36BA6192BB4E700E2C7C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27C36BA8192BB4E700E2C7C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,17 +71,24 @@
 		27C36BB5192BB4E700E2C7C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27C36BB6192BB4E700E2C7C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		27C36BB9192BB4E700E2C7C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		27C36BBC192BB4E700E2C7C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		27C36BBE192BB4E700E2C7C0 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		27C36BBF192BB4E700E2C7C0 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		27C36BC1192BB4E700E2C7C0 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		27C36BC2192BB4E700E2C7C0 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		27C36BBE192BB4E700E2C7C0 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		27C36BBF192BB4E700E2C7C0 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		27C36BC4192BB4E700E2C7C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27C36BCA192BB4E700E2C7C0 /* iBeaconMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBeaconMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36BCB192BB4E700E2C7C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		27C36BD3192BB4E700E2C7C0 /* iBeaconMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iBeaconMapTests-Info.plist"; sourceTree = "<group>"; };
 		27C36BD5192BB4E700E2C7C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27C36BD7192BB4E700E2C7C0 /* iBeaconMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iBeaconMapTests.m; sourceTree = "<group>"; };
+		27C36BE1192BDB6700E2C7C0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		27C36BE2192BDB6700E2C7C0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		27C36BE4192BDBD500E2C7C0 /* UIView+convertViewToImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convertViewToImage.h"; sourceTree = "<group>"; };
+		27C36BE5192BDBD500E2C7C0 /* UIView+convertViewToImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convertViewToImage.m"; sourceTree = "<group>"; };
+		27C36BE7192BE22300E2C7C0 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		27C36BE8192BE22300E2C7C0 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		27C36BEA192BE92400E2C7C0 /* DetailViewAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewAnimation.h; sourceTree = "<group>"; };
+		27C36BEB192BE92400E2C7C0 /* DetailViewAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewAnimation.m; sourceTree = "<group>"; };
+		27C36BED192BEC2300E2C7C0 /* MyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		27C36BEE192BEC2300E2C7C0 /* MyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +115,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27AF20BB192D38A400904B48 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				27C36BE4192BDBD500E2C7C0 /* UIView+convertViewToImage.h */,
+				27C36BE5192BDBD500E2C7C0 /* UIView+convertViewToImage.m */,
+				27C36BE7192BE22300E2C7C0 /* UIImage+ImageEffects.h */,
+				27C36BE8192BE22300E2C7C0 /* UIImage+ImageEffects.m */,
+				27AF20B8192D346100904B48 /* UIViewController+hp_layoutGuideFix.h */,
+				27AF20B9192D346100904B48 /* UIViewController+hp_layoutGuideFix.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		27AF20BC192D398200904B48 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27C36BED192BEC2300E2C7C0 /* MyNavigationController.h */,
+				27C36BEE192BEC2300E2C7C0 /* MyNavigationController.m */,
+				27C36BE1192BDB6700E2C7C0 /* DetailViewController.h */,
+				27C36BE2192BDB6700E2C7C0 /* DetailViewController.m */,
+				27C36BBE192BB4E700E2C7C0 /* MapViewController.h */,
+				27C36BBF192BB4E700E2C7C0 /* MapViewController.m */,
+				27AF20BD192D3F6400904B48 /* FindUserTableViewController.h */,
+				27AF20BE192D3F6400904B48 /* FindUserTableViewController.m */,
+				27240758192F96870076AF54 /* SettingsViewController.h */,
+				27240759192F96870076AF54 /* SettingsViewController.m */,
+				27240761192FA97C0076AF54 /* EditCellViewController.h */,
+				27240762192FA97C0076AF54 /* EditCellViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		27AF20C0192D40DE00904B48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27AF20C1192D40EE00904B48 /* User.h */,
+				27AF20C2192D40EE00904B48 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		27C36B9A192BB4E700E2C7C0 = {
 			isa = PBXGroup;
 			children = (
@@ -117,16 +189,20 @@
 		27C36BAC192BB4E700E2C7C0 /* iBeaconMap */ = {
 			isa = PBXGroup;
 			children = (
+				27AF20C0192D40DE00904B48 /* Models */,
+				27AF20BC192D398200904B48 /* View Controllers */,
+				27AF20BB192D38A400904B48 /* Categories */,
 				27C36BB5192BB4E700E2C7C0 /* AppDelegate.h */,
 				27C36BB6192BB4E700E2C7C0 /* AppDelegate.m */,
 				27C36BB8192BB4E700E2C7C0 /* Main_iPhone.storyboard */,
-				27C36BBB192BB4E700E2C7C0 /* Main_iPad.storyboard */,
-				27C36BBE192BB4E700E2C7C0 /* FirstViewController.h */,
-				27C36BBF192BB4E700E2C7C0 /* FirstViewController.m */,
-				27C36BC1192BB4E700E2C7C0 /* SecondViewController.h */,
-				27C36BC2192BB4E700E2C7C0 /* SecondViewController.m */,
 				27C36BC4192BB4E700E2C7C0 /* Images.xcassets */,
 				27C36BAD192BB4E700E2C7C0 /* Supporting Files */,
+				27C36BEA192BE92400E2C7C0 /* DetailViewAnimation.h */,
+				27C36BEB192BE92400E2C7C0 /* DetailViewAnimation.m */,
+				2724070C192E88DB0076AF54 /* DetailViewInteractionController.h */,
+				2724070D192E88DB0076AF54 /* DetailViewInteractionController.m */,
+				2724075E192F9BD10076AF54 /* OptionTableViewCell.h */,
+				2724075F192F9BD10076AF54 /* OptionTableViewCell.m */,
 			);
 			path = iBeaconMap;
 			sourceTree = "<group>";
@@ -236,7 +312,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C36BBD192BB4E700E2C7C0 /* Main_iPad.storyboard in Resources */,
 				27C36BC5192BB4E700E2C7C0 /* Images.xcassets in Resources */,
 				27C36BBA192BB4E700E2C7C0 /* Main_iPhone.storyboard in Resources */,
 				27C36BB1192BB4E700E2C7C0 /* InfoPlist.strings in Resources */,
@@ -258,10 +333,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C36BC3192BB4E700E2C7C0 /* SecondViewController.m in Sources */,
+				27C36BE3192BDB6700E2C7C0 /* DetailViewController.m in Sources */,
+				27C36BE6192BDBD500E2C7C0 /* UIView+convertViewToImage.m in Sources */,
+				27AF20BF192D3F6400904B48 /* FindUserTableViewController.m in Sources */,
+				27C36BE9192BE22300E2C7C0 /* UIImage+ImageEffects.m in Sources */,
+				27C36BEF192BEC2300E2C7C0 /* MyNavigationController.m in Sources */,
 				27C36BB7192BB4E700E2C7C0 /* AppDelegate.m in Sources */,
-				27C36BC0192BB4E700E2C7C0 /* FirstViewController.m in Sources */,
+				27C36BC0192BB4E700E2C7C0 /* MapViewController.m in Sources */,
+				2724070E192E88DB0076AF54 /* DetailViewInteractionController.m in Sources */,
+				27240763192FA97C0076AF54 /* EditCellViewController.m in Sources */,
+				27AF20C3192D40EE00904B48 /* User.m in Sources */,
+				27AF20BA192D346100904B48 /* UIViewController+hp_layoutGuideFix.m in Sources */,
+				27C36BEC192BE92400E2C7C0 /* DetailViewAnimation.m in Sources */,
 				27C36BB3192BB4E700E2C7C0 /* main.m in Sources */,
+				27240760192F9BD10076AF54 /* OptionTableViewCell.m in Sources */,
+				2724075A192F96870076AF54 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,14 +384,6 @@
 				27C36BB9192BB4E700E2C7C0 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		27C36BBB192BB4E700E2C7C0 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27C36BBC192BB4E700E2C7C0 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		27C36BD4192BB4E700E2C7C0 /* InfoPlist.strings */ = {
@@ -476,6 +554,7 @@
 				27C36BDD192BB4E700E2C7C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27C36BDE192BB4E700E2C7C0 /* Build configuration list for PBXNativeTarget "iBeaconMapTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +563,7 @@
 				27C36BE0192BB4E700E2C7C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
