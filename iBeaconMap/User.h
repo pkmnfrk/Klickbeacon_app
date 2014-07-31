@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
-@property (strong,nonatomic) NSString * name;
-@property (strong, nonatomic) NSString * location;
+@class Beacon;
 
-+(User*)userWithName:(NSString *)name andLocation:(NSString*)location;
+@interface User : NSObject
+@property (strong, nonatomic) NSString * clientid;
+@property (strong,nonatomic) NSString * name;
+@property (strong, nonatomic) Beacon * beacon;
+@property (strong, nonatomic) NSDate * latestPingDate;
+@property (strong, nonatomic) NSString * latestPingBeaconId;
+
++(User *)userWithName:(NSString *)name andBeacon:(Beacon*)beacon;
++(User *)userFromJSON:(NSDictionary*)json;
++(NSArray *)usersFromJSON:(NSArray*)json;
+
 
 @end

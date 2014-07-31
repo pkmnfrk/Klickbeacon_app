@@ -10,4 +10,6 @@
 
 @interface MyNavigationController : UINavigationController
 
+
+-(void)notifySelect;
 @end

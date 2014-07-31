@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KlickBeacon/BeaconManagerDelegate.h"
 
-@interface MapViewController : UIViewController
-
+@interface MapViewController : UIViewController <BeaconManagerDelegate>
+-(void)loadMap;
 @end

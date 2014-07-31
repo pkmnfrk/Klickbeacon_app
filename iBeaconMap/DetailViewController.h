@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KlickBeacon/Beacon.h"
+#import "Marker.h"
 
 @interface DetailViewController : UIViewController
-@property (weak, nonatomic) UIImage * backgroundViewImage;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
-
+@property (strong, nonatomic) Marker * marker;
 @end

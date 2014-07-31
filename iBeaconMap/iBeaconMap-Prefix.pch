@@ -14,3 +14,13 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+#if TARGET_IPHONE_SIMULATOR
+#define BASEURL @"http://localhost:8081/"
+#else
+#define BASEURL @"http://ibeacon.klick.com/"
+#endif
+
+#define KLICK_UUID @"2f73d96d-f86e-4f95-b88d-694cefe5837f"
+#define EXAMPLE_UUID @"2f73d96d-f86e-4f95-b88d-694cefe5837e"

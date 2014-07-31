@@ -7,12 +7,10 @@
 //
 
 #import "DetailViewController.h"
-#import "UIViewController+hp_layoutGuideFix.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <UIWebViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -25,8 +23,30 @@ BOOL stop = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.backgroundImageView.image = self.backgroundViewImage;
     self.navigationController.navigationBarHidden = NO;
+    
+    
+    
+    /*
+    
+    if(self.beacon.uiImage) {
+        self.imageView.image = self.beacon.uiImage;
+        
+    }
+    if(self.beacon.bodyText) {
+        self.textView.text = self.beacon.bodyText;
+    }*/
+    
+    
+    self.webView.delegate = self;
+    NSURL * url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"marker" ofType:@"html"] isDirectory:NO];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+    
+    
+    
+    if(self.marker.title) {
+        self.navigationItem.title = self.marker.title;
+    }
 
 }
 
@@ -62,25 +82,37 @@ BOOL stop = NO;
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)hp_usesTopLayoutGuideInConstraints
-{
-    return YES;
-}
 
-- (void)updateViewConstraints
-{
-    [super updateViewConstraints];
+-(void)webViewDidFinishLoad:(UIWebView *)webView {
     
-    id<UILayoutSupport> topLayoutGuide = self.hp_topLayoutGuide;
-    id<UILayoutSupport> bottomLayoutGuide = self.bottomLayoutGuide;
-    NSDictionary *views = NSDictionaryOfVariableBindings(_imageView, _textView, topLayoutGuide, bottomLayoutGuide);
-    {
-        NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[topLayoutGuide][_imageView]-8-[_textView][bottomLayoutGuide]" options:0 metrics:nil views:views];
-        [self.view addConstraints:constraints];
+    NSError * error;
+    NSMutableDictionary * data = [NSMutableDictionary dictionaryWithDictionary:[self.marker toDictionary]];
+    
+    
+    NSString * image = [data valueForKey:@"image"];
+    
+    if(image != nil) {
+        NSURL * baseUrl = [[NSURL alloc] initWithString:BASEURL];
+    
+        NSURL * imageUrl = [[NSURL alloc] initWithString:image relativeToURL:baseUrl];
+        [data setValue:[imageUrl absoluteString] forKey:@"image"];
     }
+    
+    NSData * jsonObj = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSString * json = [[NSString alloc] initWithData:jsonObj encoding:NSUTF8StringEncoding];
+    
+    NSString * script = [NSString stringWithFormat:@"loadContent(\"%@\", %@)", BASEURL, json];
+    NSLog(@"%@", script);
+    [webView stringByEvaluatingJavaScriptFromString:script];
+    
 }
 
-
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
 
 /*
 #pragma mark - Navigation

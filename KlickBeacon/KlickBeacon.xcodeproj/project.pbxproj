@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2785967E193625D600B2E6B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785967D193625D600B2E6B9 /* Foundation.framework */; };
+		2785968C193625D700B2E6B9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785968B193625D700B2E6B9 /* XCTest.framework */; };
+		2785968D193625D700B2E6B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785967D193625D600B2E6B9 /* Foundation.framework */; };
+		2785968F193625D700B2E6B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785968E193625D700B2E6B9 /* UIKit.framework */; };
+		27859692193625D700B2E6B9 /* libKlickBeacon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2785967A193625D600B2E6B9 /* libKlickBeacon.a */; };
+		27859698193625D700B2E6B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27859696193625D700B2E6B9 /* InfoPlist.strings */; };
+		2785969A193625D700B2E6B9 /* KlickBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27859699193625D700B2E6B9 /* KlickBeaconTests.m */; };
+		278596B61936263100B2E6B9 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 278596B51936263100B2E6B9 /* Beacon.m */; };
+		278596B91936267100B2E6B9 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 278596B81936267100B2E6B9 /* BeaconManager.m */; };
+		278596BB19362AED00B2E6B9 /* Beacon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278596B41936263100B2E6B9 /* Beacon.h */; };
+		278596BC19362AED00B2E6B9 /* BeaconManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278596B71936267100B2E6B9 /* BeaconManager.h */; };
+		278596BD19362AED00B2E6B9 /* BeaconManagerDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278596BA1936268800B2E6B9 /* BeaconManagerDelegate.h */; };
+		278596C719362D5700B2E6B9 /* BeaconBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 278596C319362D5700B2E6B9 /* BeaconBuilder.m */; };
+		278596C819362D5700B2E6B9 /* BeaconCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 278596C519362D5700B2E6B9 /* BeaconCommunicator.m */; };
+		278596C919362D6900B2E6B9 /* BeaconBuilder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278596C219362D5700B2E6B9 /* BeaconBuilder.h */; };
+		278596CA19362D6900B2E6B9 /* BeaconCommunicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278596C419362D5700B2E6B9 /* BeaconCommunicator.h */; };
+		278596CB19362D6900B2E6B9 /* BeaconCommunicatorDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 278596C619362D5700B2E6B9 /* BeaconCommunicatorDelegate.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27859690193625D700B2E6B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27859672193625D600B2E6B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27859679193625D600B2E6B9;
+			remoteInfo = KlickBeacon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27859678193625D600B2E6B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				278596C919362D6900B2E6B9 /* BeaconBuilder.h in CopyFiles */,
+				278596CA19362D6900B2E6B9 /* BeaconCommunicator.h in CopyFiles */,
+				278596CB19362D6900B2E6B9 /* BeaconCommunicatorDelegate.h in CopyFiles */,
+				278596BB19362AED00B2E6B9 /* Beacon.h in CopyFiles */,
+				278596BC19362AED00B2E6B9 /* BeaconManager.h in CopyFiles */,
+				278596BD19362AED00B2E6B9 /* BeaconManagerDelegate.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2785967A193625D600B2E6B9 /* libKlickBeacon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKlickBeacon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2785967D193625D600B2E6B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27859681193625D600B2E6B9 /* KlickBeacon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KlickBeacon-Prefix.pch"; sourceTree = "<group>"; };
+		2785968A193625D700B2E6B9 /* KlickBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KlickBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2785968B193625D700B2E6B9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2785968E193625D700B2E6B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		27859695193625D700B2E6B9 /* KlickBeaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KlickBeaconTests-Info.plist"; sourceTree = "<group>"; };
+		27859697193625D700B2E6B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27859699193625D700B2E6B9 /* KlickBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KlickBeaconTests.m; sourceTree = "<group>"; };
+		278596B41936263100B2E6B9 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
+		278596B51936263100B2E6B9 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
+		278596B71936267100B2E6B9 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconManager.h; sourceTree = "<group>"; };
+		278596B81936267100B2E6B9 /* BeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconManager.m; sourceTree = "<group>"; };
+		278596BA1936268800B2E6B9 /* BeaconManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconManagerDelegate.h; sourceTree = "<group>"; };
+		278596C219362D5700B2E6B9 /* BeaconBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconBuilder.h; sourceTree = "<group>"; };
+		278596C319362D5700B2E6B9 /* BeaconBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconBuilder.m; sourceTree = "<group>"; };
+		278596C419362D5700B2E6B9 /* BeaconCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconCommunicator.h; sourceTree = "<group>"; };
+		278596C519362D5700B2E6B9 /* BeaconCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconCommunicator.m; sourceTree = "<group>"; };
+		278596C619362D5700B2E6B9 /* BeaconCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconCommunicatorDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27859677193625D600B2E6B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2785967E193625D600B2E6B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27859687193625D700B2E6B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27859692193625D700B2E6B9 /* libKlickBeacon.a in Frameworks */,
+				2785968C193625D700B2E6B9 /* XCTest.framework in Frameworks */,
+				2785968F193625D700B2E6B9 /* UIKit.framework in Frameworks */,
+				2785968D193625D700B2E6B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27859671193625D600B2E6B9 = {
+			isa = PBXGroup;
+			children = (
+				2785967F193625D600B2E6B9 /* KlickBeacon */,
+				27859693193625D700B2E6B9 /* KlickBeaconTests */,
+				2785967C193625D600B2E6B9 /* Frameworks */,
+				2785967B193625D600B2E6B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2785967B193625D600B2E6B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2785967A193625D600B2E6B9 /* libKlickBeacon.a */,
+				2785968A193625D700B2E6B9 /* KlickBeaconTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2785967C193625D600B2E6B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2785967D193625D600B2E6B9 /* Foundation.framework */,
+				2785968B193625D700B2E6B9 /* XCTest.framework */,
+				2785968E193625D700B2E6B9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2785967F193625D600B2E6B9 /* KlickBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				278596C219362D5700B2E6B9 /* BeaconBuilder.h */,
+				278596C319362D5700B2E6B9 /* BeaconBuilder.m */,
+				278596C419362D5700B2E6B9 /* BeaconCommunicator.h */,
+				278596C519362D5700B2E6B9 /* BeaconCommunicator.m */,
+				278596C619362D5700B2E6B9 /* BeaconCommunicatorDelegate.h */,
+				278596B51936263100B2E6B9 /* Beacon.m */,
+				278596B41936263100B2E6B9 /* Beacon.h */,
+				278596B71936267100B2E6B9 /* BeaconManager.h */,
+				278596B81936267100B2E6B9 /* BeaconManager.m */,
+				278596BA1936268800B2E6B9 /* BeaconManagerDelegate.h */,
+				27859680193625D600B2E6B9 /* Supporting Files */,
+			);
+			path = KlickBeacon;
+			sourceTree = "<group>";
+		};
+		27859680193625D600B2E6B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27859681193625D600B2E6B9 /* KlickBeacon-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27859693193625D700B2E6B9 /* KlickBeaconTests */ = {
+			isa = PBXGroup;
+			children = (
+				27859699193625D700B2E6B9 /* KlickBeaconTests.m */,
+				27859694193625D700B2E6B9 /* Supporting Files */,
+			);
+			path = KlickBeaconTests;
+			sourceTree = "<group>";
+		};
+		27859694193625D700B2E6B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27859695193625D700B2E6B9 /* KlickBeaconTests-Info.plist */,
+				27859696193625D700B2E6B9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27859679193625D600B2E6B9 /* KlickBeacon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2785969D193625D700B2E6B9 /* Build configuration list for PBXNativeTarget "KlickBeacon" */;
+			buildPhases = (
+				27859676193625D600B2E6B9 /* Sources */,
+				27859677193625D600B2E6B9 /* Frameworks */,
+				27859678193625D600B2E6B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KlickBeacon;
+			productName = KlickBeacon;
+			productReference = 2785967A193625D600B2E6B9 /* libKlickBeacon.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		27859689193625D700B2E6B9 /* KlickBeaconTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278596A0193625D700B2E6B9 /* Build configuration list for PBXNativeTarget "KlickBeaconTests" */;
+			buildPhases = (
+				27859686193625D700B2E6B9 /* Sources */,
+				27859687193625D700B2E6B9 /* Frameworks */,
+				27859688193625D700B2E6B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27859691193625D700B2E6B9 /* PBXTargetDependency */,
+			);
+			name = KlickBeaconTests;
+			productName = KlickBeaconTests;
+			productReference = 2785968A193625D700B2E6B9 /* KlickBeaconTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27859672193625D600B2E6B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Klick;
+			};
+			buildConfigurationList = 27859675193625D600B2E6B9 /* Build configuration list for PBXProject "KlickBeacon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 27859671193625D600B2E6B9;
+			productRefGroup = 2785967B193625D600B2E6B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27859679193625D600B2E6B9 /* KlickBeacon */,
+				27859689193625D700B2E6B9 /* KlickBeaconTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27859688193625D700B2E6B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27859698193625D700B2E6B9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27859676193625D600B2E6B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278596C819362D5700B2E6B9 /* BeaconCommunicator.m in Sources */,
+				278596B61936263100B2E6B9 /* Beacon.m in Sources */,
+				278596C719362D5700B2E6B9 /* BeaconBuilder.m in Sources */,
+				278596B91936267100B2E6B9 /* BeaconManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27859686193625D700B2E6B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2785969A193625D700B2E6B9 /* KlickBeaconTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27859691193625D700B2E6B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27859679193625D600B2E6B9 /* KlickBeacon */;
+			targetProxy = 27859690193625D700B2E6B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27859696193625D700B2E6B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27859697193625D700B2E6B9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2785969B193625D700B2E6B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2785969C193625D700B2E6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2785969E193625D700B2E6B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KlickBeacon.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KlickBeacon/KlickBeacon-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2785969F193625D700B2E6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/KlickBeacon.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KlickBeacon/KlickBeacon-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		278596A1193625D700B2E6B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KlickBeacon/KlickBeacon-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KlickBeaconTests/KlickBeaconTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		278596A2193625D700B2E6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KlickBeacon/KlickBeacon-Prefix.pch";
+				INFOPLIST_FILE = "KlickBeaconTests/KlickBeaconTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27859675193625D600B2E6B9 /* Build configuration list for PBXProject "KlickBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2785969B193625D700B2E6B9 /* Debug */,
+				2785969C193625D700B2E6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2785969D193625D700B2E6B9 /* Build configuration list for PBXNativeTarget "KlickBeacon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2785969E193625D700B2E6B9 /* Debug */,
+				2785969F193625D700B2E6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		278596A0193625D700B2E6B9 /* Build configuration list for PBXNativeTarget "KlickBeaconTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278596A1193625D700B2E6B9 /* Debug */,
+				278596A2193625D700B2E6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27859672193625D600B2E6B9 /* Project object */;
+}

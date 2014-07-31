@@ -9,24 +9,23 @@
 #import "SettingsViewController.h"
 #import "OptionTableViewCell.h"
 #import "EditCellViewController.h"
+#import "Preferences.h"
+#import "KlickAPI.h"
 
 @interface SettingsViewController ()
-
-@property NSString * name;
 
 @end
 
 @implementation SettingsViewController
 
-NSString * _name;
-
 -(void)setName:(NSString *)name {
-    _name = name;
+    Preferences.userName = name;
     [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+    [[KlickAPI default] setClientName:name];
 }
 
 -(NSString *)name {
-    return _name;
+    return Preferences.userName;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -47,8 +46,6 @@ NSString * _name;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.name = @"Joe";
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +76,7 @@ NSString * _name;
     if(indexPath.section == 0) { //name
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextCell" forIndexPath:indexPath];
         cell.textLabel.text = @"Name";
-        cell.detailTextLabel.text = self.name;
+        cell.detailTextLabel.text = Preferences.userName;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return cell;
         

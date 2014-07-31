@@ -8,32 +8,30 @@
 
 #import "MyNavigationController.h"
 #import "DetailViewAnimation.h"
+#import "iBeaconManager.h"
+#import "SlideLeftAnimationController.h"
+#import "MapViewController.h"
+#import "SwipeInteractionController.h"
 
-@interface MyNavigationController () <UINavigationControllerDelegate>
+@interface MyNavigationController () <UINavigationControllerDelegate, iBeaconManagerDelegate, UIViewControllerTransitioningDelegate>
 
-@property (strong, nonatomic) DetailViewAnimation * pushAnimator;
-@property (strong, nonatomic) DetailViewAnimation * popAnimator;
-@property (strong, nonatomic) UIScreenEdgePanGestureRecognizer * gestureRecognizer;
 @property (nonatomic) BOOL isInteractive;
 
 @end
 
-@implementation MyNavigationController
+@implementation MyNavigationController {
+    SwipeInteractionController * _interactionController;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.pushAnimator = [[DetailViewAnimation alloc] initWithDirection:YES];
-    self.popAnimator = [[DetailViewAnimation alloc] initWithDirection:NO];
+    self.transitioningDelegate = self;
     self.delegate = self;
     
-    self.gestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-    self.gestureRecognizer.edges = UIRectEdgeLeft;
-    //[self.view addGestureRecognizer:self.gestureRecognizer];
-    
-    self.isInteractive = NO;
+    _interactionController = [SwipeInteractionController new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,45 +43,37 @@
 -(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     if(viewController != [self.viewControllers firstObject]) { //don't attach it to the root view controller
-        [viewController.view addGestureRecognizer:self.gestureRecognizer];
+        //[viewController.view addGestureRecognizer:self.gestureRecognizer];
+        [_interactionController wireToViewController:viewController];
+        
     }
     
 }
 
--(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                 animationControllerForOperation:(UINavigationControllerOperation)operation
-                                              fromViewController:(UIViewController *)fromVC
-                                                toViewController:(UIViewController *)toVC
+-(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
-    if(operation == UINavigationControllerOperationPush){
-        return self.pushAnimator;
+    if(operation == UINavigationControllerOperationPush) {
+        return [SlideLeftAnimationController allocWithType:AnimationTypePresent curved:YES];
     } else if(operation == UINavigationControllerOperationPop) {
-        return self.popAnimator;
+        return [SlideLeftAnimationController allocWithType:AnimationTypeDismiss curved:!_interactionController.interactionInProgress];
     }
     
     return nil;
 }
 
--(id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-                        interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
-{
-    if(self.isInteractive && animationController == self.popAnimator) {
-        return self.popAnimator;
-    }
-    return nil;
+-(id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+   
+    return _interactionController.interactionInProgress ? _interactionController : nil;
+    
 }
 
-
--(void)handleGesture:(UIScreenEdgePanGestureRecognizer*)gestureRecognizer
+-(void)notifySelect
 {
-    //    NSLog(@"Gesture: %ld", gestureRecognizer.state);
-    if(gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        self.isInteractive = YES;
-        self.popAnimator.gestureRecognizer = self.gestureRecognizer;
-        [self popViewControllerAnimated:YES];
-    } else if(gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
-        self.isInteractive = NO;
-    }
+    NSLog(@"Being notified about re-selection");
+    
+    [self popToRootViewControllerAnimated:YES];
+    MapViewController * map = (MapViewController *)self.topViewController;
+    [map loadMap];
 }
 
 

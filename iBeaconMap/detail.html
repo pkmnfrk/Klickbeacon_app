@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Detail view</title>
+        <style>
+            #imageWrap { width: 100%; max-height: 150px; overflow: clip; text-align: center;}
+            #image { height: 100%; max-height: 150px; }
+            #text { width: 100%; margin: 10px; font: 14pt 'Helvetica Neue'; }
+            </style>
+    </head>
+    <body>
+        <div id="imageWrap">
+            <img id="image" src="empty.png" />
+        </div>
+        <div id="text">
+            Hello World
+        </div>
+        <script>
+            function loadContent(beacon) {
+                if(beacon.image) document.getElementById("image").src = beacon.image;
+                document.getElementById("text").innerHTML = beacon.bodyText;
+            }
+        </script>
+    </body>
+</html>
